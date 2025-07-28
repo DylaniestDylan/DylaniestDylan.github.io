@@ -26,13 +26,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Skill dropdown functionality
+    const skillDropdowns = document.querySelectorAll('.skill-item-dropdown');
+    
+    skillDropdowns.forEach(dropdown => {
+        const header = dropdown.querySelector('.skill-header');
+        
+        header.addEventListener('click', function() {
+            // Close other dropdowns
+            skillDropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        });
+    });
+    
     // Add scroll effect to navigation
     window.addEventListener('scroll', function() {
         const nav = document.querySelector('nav');
         if (window.scrollY > 100) {
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.style.background = 'rgba(45, 45, 45, 0.95)';
         } else {
-            nav.style.background = '#fff';
+            nav.style.background = '#2d2d2d';
         }
     });
 });
