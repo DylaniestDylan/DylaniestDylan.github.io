@@ -1,6 +1,7 @@
 # Portfolio Website
 
 Fun little hobby project, building my personal website as a portfolio.
+Worked on semi-actively, at the very least kept up to date.
 
 ## Features
 
