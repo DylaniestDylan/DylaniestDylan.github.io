@@ -443,16 +443,44 @@ main {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .contact-item {
     font-family: 'Lato', sans-serif;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
     background: #2d2d2d;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #404040;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    border-color: #555;
+}
+
+.contact-label {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 130px;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    color: #b0b0b0;
+    flex-shrink: 0;
 }
 
 .contact-item strong {
@@ -465,6 +493,9 @@ main {
     color: #b0b0b0;
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: 300;
+    margin-left: 1rem;
+    text-align: left;
 }
 
 .contact-item a:hover {
