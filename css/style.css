@@ -204,6 +204,9 @@ main {
     border-radius: 10px;
     border: 1px solid #404040;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .skill-category:hover {
@@ -219,12 +222,34 @@ main {
     font-size: 1.2rem;
     border-bottom: 2px solid #404040;
     padding-bottom: 0.5rem;
+    flex-shrink: 0;
 }
 
 .skill-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #2d2d2d;
+}
+
+.skill-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skill-list::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.skill-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.skill-list::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }
 
 /* Dropdown Skill Items */
