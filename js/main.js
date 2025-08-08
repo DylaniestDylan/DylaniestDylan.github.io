@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const nav = document.querySelector('nav');
         if (nav) {
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(45, 45, 45, 0.95)';
+                nav.style.background = 'rgba(26, 26, 26, 0.95)';
             } else {
-                nav.style.background = '#2d2d2d';
+                nav.style.background = '#1a1a1a';
             }
         }
     });

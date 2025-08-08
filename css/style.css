@@ -9,6 +9,11 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     background-color: #1a1a1a;
+    background-image: url('../assets/Website Background.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,8 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 nav {
-    background: #2d2d2d;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     position: fixed;
     width: 100%;
     top: 0;
@@ -56,7 +61,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    background: rgba(10, 10, 10, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,13 +71,24 @@ nav {
 
 .hero-content h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: -2.0rem;
     color: #ffffff;
     opacity: 0;
     transform: translateY(-100px);
     animation: fadeInDown 1s ease-out forwards;
+}
+
+.hero-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1s ease-out 0.5s forwards;
 }
 
 .hero-content p {
@@ -83,7 +99,20 @@ nav {
     color: #b0b0b0;
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInUp 1s ease-out 1s forwards;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+    position: relative;
+}
+
+.hero-content p::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 2.5s forwards;
 }
 
 @keyframes fadeInDown {
@@ -108,6 +137,15 @@ nav {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -129,7 +167,7 @@ main {
 .contact-hero {
     text-align: center;
     padding: 4rem 0;
-    background: #2d2d2d;
+    background: #1a1a1a;
 }
 
 .about-hero h1,
@@ -199,10 +237,10 @@ main {
 }
 
 .skill-category {
-    background: #2d2d2d;
+    background: #1a1a1a;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid #404040;
+    border: 1px solid #333333;
     transition: transform 0.3s ease, border-color 0.3s ease;
     height: 400px;
     display: flex;
@@ -380,12 +418,12 @@ main {
 }
 
 .project-card {
-    background: #2d2d2d;
+    background: #1a1a1a;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     transition: transform 0.3s;
-    border: 1px solid #404040;
+    border: 1px solid #333333;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -476,9 +514,9 @@ main {
     font-family: 'Lato', sans-serif;
     margin-bottom: 1.5rem;
     padding: 1.5rem;
-    background: #2d2d2d;
+    background: #1a1a1a;
     border-radius: 10px;
-    border: 1px solid #404040;
+    border: 1px solid #333333;
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     align-items: center;
