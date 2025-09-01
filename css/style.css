@@ -607,3 +607,109 @@ main {
         font-size: 2rem;
     }
 }
+
+/* API Demo Floating Elements */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.api-demo-floating {
+    position: fixed;
+    bottom: 15vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2s forwards;
+    z-index: 10;
+    width: 100vw;
+    pointer-events: none;
+}
+
+.api-text-element {
+    text-align: center;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.api-text-element:hover {
+    transform: translateY(-2px);
+    color: #007bff;
+}
+
+.api-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.api-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #b0b0b0;
+}
+
+.api-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007bff;
+    min-height: 1.5rem;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .api-demo-floating {
+        gap: 3rem;
+        bottom: 12vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .api-demo-floating {
+        flex-direction: column;
+        gap: 2rem;
+        bottom: 10vh;
+    }
+    
+    .api-label {
+        font-size: 0.9rem;
+    }
+    
+    .api-value {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .api-demo-floating {
+        bottom: 8vh;
+        gap: 1.5rem;
+    }
+}
